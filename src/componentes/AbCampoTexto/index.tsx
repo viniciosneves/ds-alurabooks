@@ -11,12 +11,7 @@ const LabelEstilizada = styled.label<{ darkmode: boolean }>`
     margin-bottom: 8px
 `
 
-interface InputEstilizadoProps {
-    placeholderAlign: 'left' | 'center' | 'right';
-    darkmode: boolean
-}
-
-const InputEstilizado = styled.input<InputEstilizadoProps>`
+const InputEstilizado = styled.input<{ placeholderAlign: string, darkmode: boolean }>`
     font-size: 16px;
     line-height: 24px;
     padding: 8px 24px;
@@ -27,21 +22,23 @@ const InputEstilizado = styled.input<InputEstilizadoProps>`
     }
     width: 100%;
     box-sizing: border-box;
-    background: ${(props: InputEstilizadoProps) => props.darkmode ? 'transparent' : '#FFF'};
-    border-color: ${(props: InputEstilizadoProps) => props.darkmode ? '#FFF' : '#002F52'};
-    text-align: ${(props: InputEstilizadoProps) => props.placeholderAlign};
+    background: ${(props) => props.darkmode ? 'transparent' : '#FFF'};
+    border-color: ${(props) => props.darkmode ? '#FFF' : '#002F52'};
+    text-align: ${(props) => props.placeholderAlign};
     ::placeholder,
     ::-webkit-input-placeholder  {
-        color: ${(props: InputEstilizadoProps) => props.darkmode ? '#FFF' : '#002F52'};
+        color: ${(props) => props.darkmode ? '#FFF' : '#002F52'};
     }
 `
 
-export interface AbCampoTextoProps extends InputEstilizadoProps {
+export interface AbCampoTextoProps {
     label?: string;
     placeholder?: string;
+    placeholderAlign?: 'left' | 'center' | 'right';
     value: string;
     type?: 'text' | 'email' | 'password' | 'date';
     onChange: (value: string) => void
+    darkmode: boolean
 }
 
 export const AbCampoTexto = ({ 
