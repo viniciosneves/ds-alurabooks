@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export interface AbModalProps {
     children: ReactNode,
+    titulo: string,
     aberta: boolean,
     aoFechar: () => void
 }
@@ -26,7 +27,27 @@ const FundoModal = styled.div`
     background: rgba(101, 101, 101, 0.85);
 `
 
-export const AbModal = ({ children, aberta, aoFechar }: AbModalProps) => {
+const TituloModalWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    align-items: center;
+`
+const TituloModal = styled.h2`
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #EB9B00;
+    margin: 0;
+`
+const BotaoFecharModal = styled.button`
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #002F52;
+`
+
+export const AbModal = ({ children, aberta, aoFechar, titulo }: AbModalProps) => {
     if (!aberta) {
         return <></>
     }
@@ -34,6 +55,10 @@ export const AbModal = ({ children, aberta, aoFechar }: AbModalProps) => {
         <>
             <FundoModal onClick={aoFechar} />
             <JanelaModal>
+                <TituloModalWrapper>
+                    <TituloModal>{titulo}</TituloModal>
+                    <BotaoFecharModal onClick={aoFechar}>X</BotaoFecharModal>
+                </TituloModalWrapper>
                 {children}
             </JanelaModal>
         </>

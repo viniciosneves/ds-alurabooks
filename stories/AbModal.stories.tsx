@@ -13,5 +13,6 @@ export const Primario = Template.bind({})
 
 Primario.args = {
     aberta: true,
+    titulo: 'Titulo da Modal',
     children: <h1>Uma modal bacanuda</h1>
 } as AbModalProps
