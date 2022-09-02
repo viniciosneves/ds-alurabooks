@@ -8,7 +8,7 @@ export interface AbModalProps {
 }
 
 const JanelaModal = styled.div`
-    position: absolute;
+    position: fixed;
     padding: 64px;
     background: #FFFFFF;
     box-shadow: 4px 4px 24px -4px rgba(0, 0, 0, 0.15);
@@ -18,7 +18,7 @@ const JanelaModal = styled.div`
     transform: translate(-50%, -50%);
 `
 const FundoModal = styled.div`
-    position: absolute;
+    position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;

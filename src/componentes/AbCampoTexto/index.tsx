@@ -38,7 +38,7 @@ export interface AbCampoTextoProps {
     value: string;
     type?: 'text' | 'email' | 'password' | 'date';
     onChange: (value: string) => void
-    darkmode: boolean
+    darkmode?: boolean
 }
 
 export const AbCampoTexto = ({ 
