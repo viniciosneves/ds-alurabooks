@@ -1,4 +1,4 @@
-![Integrando seu projeto React com APIs](thumbnail.png)
+![Integrando seu projeto React com APIs](https://github.com/viniciosneves/ds-alurabooks/raw/main/thumbnail.png)
 
 # AluraBooks
 
@@ -9,12 +9,11 @@ O AluraBooks é uma loja virtual que vende livros da Casa do Código.
 
 Esse repositório é o Design System utilizado no projeto.
 
-<img src="screencapture.png" alt="Imagem do AluraBooks" width="50%">
+<img src="https://github.com/viniciosneves/ds-alurabooks/raw/main/screencapture.png" alt="Imagem do AluraBooks" width="50%">
 
 ## 🔨 Funcionalidades do projeto
 
-O AluraBooks começa com a página inicial já pronta, que você pode baixar e utilizar ou então... criar a sua versão baseada <a href="https://www.figma.com/file/POpX503Kobu83iGdiaICvk/React%3A-Alura-Books?node-id=119%3A3145" target="_blank">no figma</a>.
-No decorrer da formação nós vamos implementar toda a camada de comunicação com a API, inclusive a autenticação.
+Aqui você encontra a paleta de componentes já pronta, que você pode instalar e utilizar ou então... criar a sua versão baseada <a href="https://www.figma.com/file/POpX503Kobu83iGdiaICvk/React%3A-Alura-Books?node-id=0%3A1" target="_blank">no figma</a>.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
