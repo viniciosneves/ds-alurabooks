@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styled from "styled-components";
 
 const BotaoEstilizado = styled.button`
@@ -41,29 +41,24 @@ const LabelEstilizada = styled.label`
 `
 
 export interface AbInputQuantidadeProps {
-    onChange?: (value:number) => void
+    onChange: (value:number) => void
+    value: number
 }
 
-export const AbInputQuantidade = ({ onChange } : AbInputQuantidadeProps) => {
-    const [value, setValue] = useState(1)
+export const AbInputQuantidade = ({ onChange, value } : AbInputQuantidadeProps) => {
 
-    useEffect(() => {
-        if (onChange) {            
-            onChange(Number(value))
-        }
-    }, [value])
 
     return (
         <ContainerEstilizado>
             <LabelEstilizada>Quantidade</LabelEstilizada>
             <FlexContainerEstilizado>
-                <BotaoEstilizado onClick={() => setValue(prev => prev - 1)}>
+                <BotaoEstilizado onClick={() => onChange(value - 1)}>
                     -
                 </BotaoEstilizado>
                 <SpanEstilizado>
                     {value}
                 </SpanEstilizado>
-                <BotaoEstilizado onClick={() => setValue(prev => prev + 1)}>
+                <BotaoEstilizado onClick={() => onChange(value + 1)}>
                     +
                 </BotaoEstilizado>
             </FlexContainerEstilizado>
